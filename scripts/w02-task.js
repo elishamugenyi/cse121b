@@ -32,7 +32,7 @@ imageElement.setAttribute('alt',`Profile image of ${fullName}`);
 let favoriteFoods = ["Guacamole","Fish","sushi","steak","Gnut stew"];
 
 //display my favoriteFoods
-foodElement.innerHTML = favoriteFoods;
+foodElement.innerHTML = `<br>${favoriteFoods}`;
 
 
 
