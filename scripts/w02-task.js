@@ -5,7 +5,7 @@
 /* Step 2 - Variables */
 
 //declared and instastiate a fullname variable
-const fullname = "Elisha Mugenyi";
+const fullName = "Elisha Mugenyi";
 
 //create variable for current year
 let currentYear = new Date().getFullYear();
@@ -20,7 +20,7 @@ const yearElement = document.querySelector('#year');
 const imageElement = document.getElementById("img");
 
 /* Step 4 - Adding Content */
-nameElement.innerHTML = `<strong>${fullname}</strong>`;
+nameElement.innerHTML = `<strong>${fullName}</strong>`;
 yearElement.textContent = currentYear;
 imageElement.setAttribute("src", profilePicture);
 imageElement.setAttribute('alt',`Profile image of ${fullName}`);
