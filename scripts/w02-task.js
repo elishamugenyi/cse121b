@@ -29,10 +29,31 @@ imageElement.setAttribute('alt',`Profile image of ${fullName}`);
 
 
 /* Step 5 - Array */
-let favoriteFoods = ["Guacamole","Fish","sushi","steak","Gnut stew"];
+let favoriteFoods = ["Guacamole","sushi","steak","Gnut stew"];
 
-//display my favoriteFoods
-foodElement.innerHTML = `<br>${favoriteFoods}`;
+// Display the favorite foods array in the HTML element
+foodElement.innerHTML = favoriteFoods.join('<br>');
+
+// Declare and instantiate a variable to hold another single favorite food item
+let newFavoriteFood = "fish";
+
+// Add the value stored in this new variable to your favorite food array
+favoriteFoods.push(newFavoriteFood);
+
+// Display the updated favorite foods array in the HTML element
+foodElement.innerHTML += `<br>${favoriteFoods.join('<br>')}`;
+
+// Remove the first element in the favorite food array
+favoriteFoods.shift();
+
+// Display the modified favorite foods array in the HTML element
+foodElement.innerHTML += `<br>${favoriteFoods.join('<br>')}`;
+
+// Remove the last element in the favorite food array
+favoriteFoods.pop();
+
+// Display the final modified favorite foods array in the HTML element
+foodElement.innerHTML += `<br>${favoriteFoods.join('<br>')}`;
 
 
 
