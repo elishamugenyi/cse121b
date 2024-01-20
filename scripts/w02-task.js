@@ -22,14 +22,17 @@ const imageElement = document.querySelector('#img');
 /* Step 4 - Adding Content */
 nameElement.innerHTML = `<strong>${fullname}</strong>`;
 yearElement.textContent = currentYear;
-imageElement.setAttribute("src", "images/el.jpg");
+imageElement.setAttribute("src", profilePicture);
 imageElement.setAttribute('alt',`Profile image of ${fullName}`);
 
 
 
 
 /* Step 5 - Array */
+let favoriteFoods = ["Guacamole","Fish","sushi","steak","Gnut stew"];
 
+//display my favoriteFoods
+foodElement.innerHTML = favoriteFoods;
 
 
 
