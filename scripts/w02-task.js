@@ -29,7 +29,7 @@ imageElement.setAttribute('alt',`Profile image of ${fullName}`);
 
 
 /* Step 5 - Array */
-let favoriteFoods = ["Guacamole","sushi","steak","Gnut stew"];
+let favoriteFoods = ["Guacamole","sushi","steak"];
 
 // Display the favorite foods array in the HTML element
 foodElement.innerHTML = favoriteFoods.join('<br>');
