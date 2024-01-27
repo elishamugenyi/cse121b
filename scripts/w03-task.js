@@ -2,14 +2,14 @@
 
 /* FUNCTIONS */
 /* Function Definition - Add Numbers */
-function Add(number1, number2){
+function add(number1, number2){
     return number1 + number2;
 }
 function addNumbers (){
-    const addend1 = parseFloat(document.getElementById('add1').value);
-    const addend2 = parseFloat(document.getElementById('add2').value);
+    const number1 = parseFloat(document.getElementById('add1').value);
+    const number2 = parseFloat(document.getElementById('add2').value);
     // Perform addition
-    const sum = add(addend1, addend2); // Call the add function with the two arguments
+    const sum = add(number1, number2); // Call the add function with the two arguments
 
     // Assign the sum to the HTML form element with ID of sum
     document.getElementById('sum').value = sum;
