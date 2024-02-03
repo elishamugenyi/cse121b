@@ -142,14 +142,14 @@ document.getElementById("sumOfArray").textContent = sum;
 
 /* Output Multiplied by 2 Array */
 // Use the map() method to multiply each element in the array by 2
-const multipliedArray = array.map(element => element * 2);
+const multipliedArray = numbersArray.map(element => element * 2);
 
 // Assign the result to the HTML element with an ID of "multiplied"
 document.getElementById("multiplied").textContent = multipliedArray.join(", ");
 
 /* Output Sum of Multiplied by 2 Array */
 // Use the map() method to multiply each element in the array by 2
-const multipleArray = array.map(element => element * 2);
+const multipleArray = numbersArray.map(element => element * 2);
 
 // Use the reduce() method to sum the elements of the multiplied array
 const sumOfMultiplied = multipleArray.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
