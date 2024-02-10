@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random User Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        #user-info {
+            text-align: center;
+        }
+        img {
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="user-info">
+        <h1>Random User Generator</h1>
+        <button id="fetch-btn">Fetch Random User</button>
+        <div id="user-container"></div>
+    </div>
+
+    <script>
+        const fetchRandomUser = async () => {
+            try {
+                const response = await fetch('https://randomuser.me/api/');
+                const data = await response.json();
+                const user = data.results[0];
+
+                const userContainer = document.getElementById('user-container');
+                userContainer.innerHTML = `
+                    <img src="${user.picture.large}" alt="User Image">
+                    <h2>${user.name.first} ${user.name.last}</h2>
+                    <p>Email: ${user.email}</p>
+                    <p>Location: ${user.location.city}, ${user.location.country}</p>
+                `;
+            } catch (error) {
+                console.error('Error fetching random user:', error);
+            }
+        };
+
+        document.getElementById('fetch-btn').addEventListener('click', fetchRandomUser);
+    </script>
+</body>
+</html>
