@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random User Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        #user-info {
+            text-align: center;
+        }
+        img {
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="user-info">
+        <h1>Random User Generator</h1>
+        <button id="fetch-btn">Fetch Random User</button>
+        <div id="user-container"></div>
+    </div>
+
+    <footer>
+        &copy;<span id="year"></span> | Week 6 Project - Displaying Random Usernames and people Using the API | CSE 121b
+      </footer>
+      <script src="scripts/main.js"></script>
+      <script>
+        document.getElementById("year").innerHTML = new Date().getFullYear();
+      </script>
+      <script src="scripts/project.js"></script>
+</body>
+</html>
